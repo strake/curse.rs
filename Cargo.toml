@@ -1,6 +1,6 @@
 [package]
 name = "curse"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["M Farkas-Dyck <strake888@gmail.com>"]
 description = "TTY UI library"
 license = "MIT OR Apache-2.0"
@@ -8,4 +8,4 @@ license = "MIT OR Apache-2.0"
 [dependencies]
 bitflags = "0.7"
 cursebox = "0.1"
-libc = "0.2"
+libc = { version = "0.2", default-features = false }
