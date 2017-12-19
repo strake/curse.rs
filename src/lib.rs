@@ -90,10 +90,10 @@ pub enum Color {
 
 bitflags! {
     #[repr(C)]
-    pub flags Face: u8 {
-        const BOLD      = 0x10,
-        const UNDERLINE = 0x20,
-        const REVERSE   = 0x40,
+    pub struct Face: u8 {
+        const BOLD      = 0x10;
+        const UNDERLINE = 0x20;
+        const REVERSE   = 0x40;
     }
 }
 
