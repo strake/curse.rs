@@ -6,6 +6,6 @@ description = "TTY UI library"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-bitflags = "1.0"
 cursebox = "0.1"
+flags = "0.1"
 libc = { version = "0.2", default-features = false }
