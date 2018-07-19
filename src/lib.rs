@@ -136,7 +136,9 @@ impl Term {
     pub fn freshen(&mut self) { unsafe { tb_present() } }
 
     pub fn print_char(&mut self, x_pos: usize, y_pos: usize,
-                      face: Face, fg: Color, bg: Color, x: char) {
+                      mut face: Face, mut fg: Color, mut bg: Color, x: char) {
+        if face.contains(Face::REVERSE) { mem::swap(&mut fg, &mut bg); }
+        face &= !Face::REVERSE;
         unsafe { tb_change_cell(x_pos as c_int, y_pos as c_int, x as u32,
                                 fg as u16 | ((face.bits as u16) << 8), bg as u16) };
     }
