@@ -111,6 +111,7 @@ pub enum Failure {
     PipeTrapError,
 }
 
+#[derive(Debug)]
 pub struct Term(PhantomData<*mut ()>);
 
 impl Term {
